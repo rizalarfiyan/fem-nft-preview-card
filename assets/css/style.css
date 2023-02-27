@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(215, 51%, 70%);
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: hsl(216, 50%, 16%);
+    width: calc(100% - 30px);
+    max-width: 380px;
+    box-shadow: 0 20px 50px hsla(217, 54%, 5%, .5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px;
+    z-index: 1;
+}
+
+.card .image {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card .image::before {
+    content: url('../images/icon-view.svg');
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    transition: opacity .4s ease-in-out;
+}
+
+.card .image:hover::before {
+    opacity: 1;
+}
+
+.card img:not(.icon) {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    margin: 18px 0 12px;
+}
+
+.content>*:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.content h1,
+.content p {
+    margin: 0;
+}
+
+.content .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 20px;
+}
+
+.content .info .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content .info .item:first-child {
+    color: hsl(178, 100%, 50%);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user .avatar {
+    width: 40px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.attribution {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    padding: 16px;
+    width: 100%;
+}
