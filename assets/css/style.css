@@ -46,7 +46,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 16px;
+    padding: 24px;
     z-index: 1;
 }
 
@@ -82,7 +82,7 @@ a:hover {
 }
 
 .content {
-    margin: 18px 0 12px;
+    margin: 22px 0 6px;
 }
 
 .content>*:not(:last-child) {
